@@ -3,7 +3,7 @@
 This repository highlights some projects that I have worked on.
 
 ## Table of Contents
-- [Maths visualizations](#Maths visualizations)
+- [Maths visualizations](#maths-visualizations)
 
 ## Maths visualizations
 ### Interactive zoom into Mandelbrot set
