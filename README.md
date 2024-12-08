@@ -1,14 +1,9 @@
 # Alexander Nicol: Portfolio
 
-This repository highlights some projects that I have worked on. 
+This repository highlights some projects that I have worked on.
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
+- [Maths visualizations](#Maths visualizations)
 
 ## Maths visualizations
 ### Interactive zoom into Mandelbrot set
