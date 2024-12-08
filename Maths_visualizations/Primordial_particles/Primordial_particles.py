@@ -12,6 +12,9 @@ import numpy as np
 import itertools
 import matplotlib.pyplot as plt
 from datetime import datetime
+import os
+import subprocess
+from glob import glob
 
 print('Press p to pause/unpause. Add new cells in pause mode by right clicking.')
 
@@ -52,6 +55,7 @@ pause = True
 stoptime = pygame.time.get_ticks()
 t = 0
 t0,t1,t2,t3, t4 = [datetime.now()]*5
+it = 0
 while running:
     #screen.fill((50,50,50))
     if not pause:
@@ -76,6 +80,8 @@ while running:
                 t,(t1-t0).microseconds/1000,(t2-t1).microseconds/1000,(t3-t2).microseconds/1000,(t4-t3).microseconds/1000,(t0-t4).microseconds/1000
             ), True, (255,255,255))
         screen.blit(param_text,param_text.get_rect(bottomleft=(10,h-10)))
+        pygame.image.save(pygame.display.get_surface(), 'GIF/%05d.png'%(it))
+        it += 1
         t0 = datetime.now()
         rotationpart = np.zeros_like(neighbors,dtype=np.float32)
         for (a,b) in neighbor_pairs:
@@ -98,11 +104,19 @@ while running:
         if event.type == KEYDOWN:
             if event.key == K_ESCAPE:
                 running = False
-        pressed_keys = pygame.key.get_pressed()
-        if pressed_keys[K_p]: 
+            elif event.key == K_p:
                 pause = not pause    
         elif event.type == QUIT:
             running = False
     pygame.display.flip()
-    
 pygame.quit()
+
+
+subprocess.run([
+    'ffmpeg',
+    '-i',
+    'GIF/%05d.png',
+    'GIF/anim.gif','-y'
+])
+for f in glob('GIF/*.png'):
+    os.remove(f)
