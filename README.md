@@ -4,6 +4,10 @@ This repository highlights some projects that I have worked on.
 
 ## Table of Contents
 - [Maths visualizations](#maths-visualizations)
+- [Kaggle Competition: Regression with an Insurance Dataset](#kaggle-competition-regression-with-an-insurance-dataset)
+
+## Kaggle Competition: Regression with an Insurance Dataset
+![Jupyter Notebook](Kaggle_regression_insurance/transformed_target.ipynb)
 
 ## Maths visualizations
 ### Interactive zoom into Mandelbrot set
