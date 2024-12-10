@@ -7,7 +7,7 @@ This repository highlights some projects that I have worked on.
 - [Maths visualizations](#maths-visualizations)
 
 ## Kaggle Competition: Regression with an Insurance Dataset
-![Link to Jupyter Notebook](Kaggle_regression_insurance/transformed_target.ipynb)
+![Link to Jupyter Notebook](https://github.com/xelanicol/Portfolio/blob/main/Kaggle_regression_insurance/transformed_target.ipynb)
 
 ## Maths visualizations
 ### Interactive zoom into Mandelbrot set
