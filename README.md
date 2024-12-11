@@ -8,17 +8,17 @@ This repository highlights some projects that I have worked on.
 - [Maths visualizations](#maths-visualizations)
 
 ## Kaggle Competition: Regression with an Insurance Dataset
-![Link to Kaggle Competition page](https://www.kaggle.com/competitions/playground-series-s4e12/overview)
+<a href="https://www.kaggle.com/competitions/playground-series-s4e12/overview">Link to Kaggle page</a>
 
 This 2024 challenge had the objective of predicting insurance premiums based on customer data, based on a dataset of over 1 million samples. 
 
 I entered the competition and achieved rank #???/??? with my entry, demonstrating the ability to develop a high-scoring model. (What was the range of other scores achieved?) (What percent of top scores was I in?).
 
-![Link to Jupyter Notebook](https://github.com/xelanicol/Portfolio/blob/main/Kaggle_regression_insurance/transformed_target.ipynb)
+<a href="https://github.com/xelanicol/Portfolio/blob/main/Kaggle_regression_insurance/transformed_target.ipynb">Link to Jupyter Notebook</a>
 
 ## PhD chapter: Predicting severe side effects of radiotherapy using multi-organ, multi-omic features
 
-![Link to publication](https://link.springer.com/article/10.1007/s11547-024-01901-z)
+<a href="https://link.springer.com/article/10.1007/s11547-024-01901-z">Link to publication</a>
 
 I developed and externally validated a multi-omic model with combined clinical, radiomic and dosiomic features, achieving superior pre-treatment prediction of severe oral mucositis in nasopharyngeal carcinoma patients undergoing radiotherapy compared to conventional approaches (16% improvement in external validation AUC).
 
