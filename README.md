@@ -6,10 +6,13 @@ This repository highlights some projects that I have worked on.
 - [Kaggle Competition: Regression with an Insurance Dataset](#kaggle-competition-regression-with-an-insurance-dataset)
 - [Maths visualizations](#maths-visualizations)
 
-## Kaggle Competition: Regression with an Insurance Dataset\
+## Kaggle Competition: Regression with an Insurance Dataset
 ![Link to Kaggle Competition page](https://www.kaggle.com/competitions/playground-series-s4e12/overview)
+
 This 2024 challenge had the objective of predicting insurance premiums based on customer data, based on a dataset of over 1 million samples. 
+
 I entered the competition and achieved rank #???/??? with my entry, demonstrating the ability to develop a high-scoring model. (What was the range of other scores achieved?) (What percent of top scores was I in?).
+
 ![Link to Jupyter Notebook](https://github.com/xelanicol/Portfolio/blob/main/Kaggle_regression_insurance/transformed_target.ipynb)
 
 ## Maths visualizations
