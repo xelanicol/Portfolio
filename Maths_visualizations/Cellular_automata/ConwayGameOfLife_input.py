@@ -6,7 +6,7 @@ import numpy as np
 
 print('Press p to pause/unpause. Add new cells in pause mode by right clicking.')
 
-n = 21
+n = 41
 cells = np.zeros((n,n),dtype=int)
 cellsize = int(402/n)
 pygame.init()
