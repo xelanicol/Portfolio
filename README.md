@@ -26,7 +26,7 @@ The model harnessed features extracted from pre-treatment CT scans, radiotherapy
 ### Interactive zoom into Mandelbrot set
 This script allows the user to repeatedly click on regions of the Mandelbrot set to zoom in closer.
 
-![Mandelbrot set](Maths_visualizations/Mandelbrot_Interactive/005.png)
+![Mandelbrot set](Maths_visualizations/Mandelbrot_Interactive/GIF/mandelbrot_zoom.gif)
 
 ### Cellular automata
 This folder contains Python scripts for Conway's Game of Life and Langton's Ant, visualized in pygame with user-provided starting conditions. Langton's Ant is generalized to multiple colours and multiple ants.
