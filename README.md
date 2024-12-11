@@ -12,13 +12,13 @@ This repository highlights some projects that I have worked on.
 
 This 2024 challenge had the objective of predicting insurance premiums based on customer data, based on a dataset of over 1 million samples. 
 
-I entered the competition and achieved rank #???/??? with my entry, demonstrating the ability to develop a high-scoring model. (What was the range of other scores achieved?) (What percent of top scores was I in?).
+I entered the competition and achieved rank #380/890  with my entry, demonstrating the ability to develop a high-scoring model (updated 11/12/2024).
 
 <a href="https://github.com/xelanicol/Portfolio/blob/main/Kaggle_regression_insurance/transformed_target.ipynb">Link to Jupyter Notebook</a>
 
 ## PhD chapter: Predicting severe side effects of radiotherapy using multi-organ, multi-omic features
 
-<a href="https://link.springer.com/article/10.1007/s11547-024-01901-z">Link to publication</a>
+<a href="https://link.springer.com/article/10.1007/s11547-024-01901-z">Link to Publication</a>
 
 I developed and externally validated a multi-omic model with combined clinical, radiomic and dosiomic features, achieving superior pre-treatment prediction of severe oral mucositis in nasopharyngeal carcinoma patients undergoing radiotherapy compared to conventional approaches (16% improvement in external validation AUC).
 
