@@ -4,6 +4,7 @@ This repository highlights some projects that I have worked on.
 
 ## Table of Contents
 - [Kaggle Competition: Regression with an Insurance Dataset](#kaggle-competition-regression-with-an-insurance-dataset)
+- [PhD chapter: Predicting severe side effects of radiotherapy using multi-organ, multi-omic features](#phd-chapter-predicting-severe-side-effects-of-radiotherapy-using-multi-organ-multi-omic-features)
 - [Maths visualizations](#maths-visualizations)
 
 ## Kaggle Competition: Regression with an Insurance Dataset
@@ -14,6 +15,14 @@ This 2024 challenge had the objective of predicting insurance premiums based on 
 I entered the competition and achieved rank #???/??? with my entry, demonstrating the ability to develop a high-scoring model. (What was the range of other scores achieved?) (What percent of top scores was I in?).
 
 ![Link to Jupyter Notebook](https://github.com/xelanicol/Portfolio/blob/main/Kaggle_regression_insurance/transformed_target.ipynb)
+
+## PhD chapter: Predicting severe side effects of radiotherapy using multi-organ, multi-omic features
+
+![Link to publication](https://link.springer.com/article/10.1007/s11547-024-01901-z)
+
+I developed and externally validated a multi-omic model with combined clinical, radiomic and dosiomic features, achieving superior pre-treatment prediction of severe oral mucositis in nasopharyngeal carcinoma patients undergoing radiotherapy compared to conventional approaches (16% improvement in external validation AUC).
+
+The model harnessed features extracted from pre-treatment CT scans, radiotherapy dose distributions and clinical features. A deep learning auto-segmentation model was harnessed to supplement the set of organ contours included for feature extraction.
 
 ## Maths visualizations
 ### Interactive zoom into Mandelbrot set
