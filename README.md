@@ -10,7 +10,7 @@
 
 This 2024 challenge had the objective of predicting insurance premiums based on customer data, based on a dataset of over 1 million samples. 
 
-I entered the competition and achieved rank #380/890  with my entry, demonstrating the ability to develop a high-scoring model (updated 11/12/2024).
+I entered the competition and achieved rank #194/1050  with my entry, demonstrating the ability to develop a high-scoring model (updated 14/12/2024).
 
 <a href="https://github.com/xelanicol/Portfolio/blob/main/Kaggle_regression_insurance/transformed_target.ipynb">Link to Jupyter Notebook</a>
 
