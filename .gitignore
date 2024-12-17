@@ -1,3 +1,4 @@
 Kaggle_regression_insurance/dataset
 .venv
 .conda
+*.csv

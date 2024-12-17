@@ -27,4 +27,4 @@ def preprocess_data(df):
     df['Policy Start Date'] = pd.to_datetime(df['Policy Start Date']).apply(lambda x: x.timestamp())
     df.fillna(df.median(),inplace=True)
 
-    return df
+    return df.astype(np.float32)
