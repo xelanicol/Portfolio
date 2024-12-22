@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World Map with Pins</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZGQjk97yU9tGcUGECU_4uCoVibgSZrO0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tabulator-tables@5.2.7/dist/js/tabulator.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tabulator-tables@5.2.7/dist/css/tabulator.min.css" rel="stylesheet">
+    <style>
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        #tables-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #country-table, #city-table {
+            margin: 20px;
+            width: 80%;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="tables-container">
+       <div id="summary">
+            <h3>Total Countries Visited: <span id="total-countries"></span></h3>
+            <h3>Total Cities Visited: <span id="total-cities"></span></h3>
+            <h3>Longest Trip: <span id="longest-trip"></span> days</h3>
+        </div>
+        <div id="country-table"></div>
+        <div id="city-table"></div>
+    </div>
+    <script>
+        function initMap() {
+            // Create the map centered on the world
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 2,
+                center: { lat: 0, lng: 0 }
+            });
+
+            // Add pins with hover-over labels
+            var locations = [{'lat': 48.8566, 'lng': 2.3522, 'city': 'Paris', 'days': 5, 'dates': 'Jan 5-10, 2024', 'country': 'France'}, {'lat': 40.7128, 'lng': -74.006, 'city': 'New York', 'days': 3, 'dates': 'Feb 15-18, 2024', 'country': 'USA'}, {'lat': 35.6895, 'lng': 139.6917, 'city': 'Tokyo', 'days': 7, 'dates': 'Mar 20-27, 2024', 'country': 'Japan'}];
+
+            locations.forEach(location => {
+                var marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.city
+                });
+
+                var infoWindow = new google.maps.InfoWindow({
+                    content: `<strong>${location["city"]}</strong><br>
+                              Days Spent: ${location["days"]}<br>
+                              Date(s): ${location["dates"]}`
+                });
+
+                marker.addListener('mouseover', () => {
+                    infoWindow.open(map, marker);
+                });
+                marker.addListener('mouseout', () => {
+                    infoWindow.close();
+                });
+            });
+        }
+
+        function setupTables(locations) {
+            const countryData = [];
+            const cityData = [];
+            const countryMap = new Map();
+
+            locations.forEach(location => {
+                // Process countries
+                if (!countryMap.has(location.country)) {
+                    countryMap.set(location.country, {
+                        totalDays: 0,
+                        topCity: location.city,
+                        maxDays: 0
+                    });
+                }
+
+                const country = countryMap.get(location.country);
+                country.totalDays += location.days;
+                if (location.days > country.maxDays) {
+                    country.maxDays = location.days;
+                    country.topCity = location.city;
+                }
+
+                // Process cities
+                cityData.push({
+                    city: location.city,
+                    totalDays: location.days,
+                    dates: location.dates
+                });
+            });
+
+            // Convert country map to array
+            countryMap.forEach((value, key) => {
+                countryData.push({
+                    country: key,
+                    totalDays: value.totalDays,
+                    topCity: value.topCity
+                });
+            });
+
+            const longestTrip = Math.max(...locations.map(loc => loc.days));
+
+            document.getElementById("total-countries").textContent = countryData.length;
+            document.getElementById("total-cities").textContent = cityData.length;
+            document.getElementById("longest-trip").textContent = longestTrip;
+
+            new Tabulator("#country-table", {
+                data: countryData,
+                layout: "fitColumns",
+                columns: [
+                    { title: "Country", field: "country" },
+                    { title: "Total Days", field: "totalDays" },
+                    { title: "Top City", field: "topCity" }
+                ]
+            });
+
+            new Tabulator("#city-table", {
+                data: cityData,
+                layout: "fitColumns",
+                columns: [
+                    { title: "City", field: "city" },
+                    { title: "Total Days", field: "totalDays" },
+                    { title: "Dates", field: "dates" }
+                ]
+            });
+        }
+
+        // Initialize the map and tables
+        window.onload = function() {
+            initMap();
+            setupTables([{'lat': 48.8566, 'lng': 2.3522, 'city': 'Paris', 'days': 5, 'dates': 'Jan 5-10, 2024', 'country': 'France'}, {'lat': 40.7128, 'lng': -74.006, 'city': 'New York', 'days': 3, 'dates': 'Feb 15-18, 2024', 'country': 'USA'}, {'lat': 35.6895, 'lng': 139.6917, 'city': 'Tokyo', 'days': 7, 'dates': 'Mar 20-27, 2024', 'country': 'Japan'}]);
+        };
+    </script>
+</body>
+</html>
