@@ -10,9 +10,9 @@
 
 This 2024 challenge had the objective of predicting insurance premiums based on customer data, based on a dataset of over 1 million samples. 
 
-I entered the competition and developed a machine learning model after performing exploratory data analysis. I achieved rank #194/1050  with my entry, demonstrating the ability to develop a high-scoring model (updated 14/12/2024).
+I entered the competition and developed a machine learning model after performing exploratory data analysis. I achieved rank #234/1394 (top 17% of entries), demonstrating the ability to develop a high-scoring model (updated 19/12/2024).
 
-<a href="https://github.com/xelanicol/Portfolio/blob/main/Kaggle_regression_insurance/transformed_target.ipynb">Link to Jupyter Notebook</a>
+<a href="https://github.com/xelanicol/Portfolio/blob/main/Kaggle_regression_insurance/kaggle_regression_insurance_keep_native_categorical_keep_NA.md">Link to Jupyter Notebook</a>
 
 ## PhD chapter: Predicting severe side effects of radiotherapy using multi-organ, multi-omic features
 
